@@ -17,8 +17,13 @@
     }
 </style>
 
+<svelte:head>
+  <title>The Locked Box</title>
+</svelte:head>
+
 <div class="content">
   <div class="section">
+    <h1 class="title">The Locked Box</h1>
     {#if box.locked}
       <p>The box is <span class="is-size-4 is-uppercase has-text-weight-bold has-text-success">locked</span></p>
       <button class="button is-danger" on:click={box.unlock}>Unlock</button>
@@ -29,7 +34,7 @@
   </div>
 
   <div class="box">
-    <p class="title is-5">Contents:</p>
+    <p class="subtitle">Contents:</p>
     {#if box.locked}
       <p>Can't open!</p>
     {:else}
